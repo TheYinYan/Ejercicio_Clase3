@@ -46,11 +46,17 @@ public class App {
                 1. Horicontal
 
                 2. Vertical
+
+                3. Horizontal y Vertical
+
                 """);
         int opcion = Integer.parseInt(System.console().readLine("Introduzca la opción: "));
-        System.out.println();
 
-        if (opcion == 1) {
+        if (opcion == 1 || opcion == 3) {
+            System.out.println();
+            System.out.println("Versión Horizontal");
+            System.out.println();
+            
             for (int i = 1; i <= 3; i++) {
                 System.out.printf("num %s ", i);
                 for (int j = 0; j < ((i == 1) ? num1 : (i == 2) ? num2 : num3); j++) {
@@ -76,8 +82,11 @@ public class App {
         // num1 num2 num3
         // """);
 
-        if (opcion == 2) {
+        if (opcion == 2 || opcion == 3) {
             System.out.println();
+            System.out.println("Versión Vertical");
+            System.out.println();
+
             System.out.printf("%7d%7d%7d%n", num1, num2, num3);
             for (int i = max; i >= 1; i--) {
                 for (int j = 1; j <= 3; j++) {
