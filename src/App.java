@@ -43,7 +43,7 @@ public class App {
 
         System.out.println("""
 
-                1. Oricontal
+                1. Horicontal
 
                 2. Vertical
                 """);
@@ -77,20 +77,28 @@ public class App {
         // """);
 
         if (opcion == 2) {
-            for (int i = 0; i <= max + 2; i++) {
-                System.out.println();
+            System.out.println();
+            System.out.printf("%7d%7d%7d%n", num1, num2, num3);
+            for (int i = max; i >= 1; i--) {
                 for (int j = 1; j <= 3; j++) {
-                    if (i == 0) {
-                        System.out.printf("%-4d ", ((i == 1) ? num1 : (i == 2) ? num2 : num3));
-                    } else if (i != max + 2) {
-                        System.out.printf("%-2s%2s%2s "," ", j, " ");
+                    int valor = (j == 1) ? num1 : (j == 2) ? num2 : num3;
 
-                    } else if (i == max + 2) {
-                        System.out.printf("%-4s ", " num "+j);
+                    if (i <= valor) {
+                        if (valor == max)
+                            System.out.printf(GREEN + "%7s" + RESET, "████");
+                        else if (valor == med)
+                            System.out.printf(YELLOW + "%7s" + RESET, "████");
+                        else
+                            System.out.printf(RED + "%7s" + RESET, "████");
+                    } else {
+                        System.out.printf("%7s", "");
                     }
                 }
+                System.out.println();
             }
+            System.out.printf("%7s%7s%7s%n", "num1", "num2", "num3");
             System.out.println();
+
         }
 
         System.out.printf("%s %d %s %d %s %d%s", GREEN + "Maximo", max, YELLOW + "Medio", med, RED + "Bajo", min,
