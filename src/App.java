@@ -43,7 +43,7 @@ public class App {
 
         System.out.println("""
 
-                1. Horicontal
+                1. Horizontal
 
                 2. Vertical
 
