@@ -64,10 +64,10 @@ public class App {
                     if (max == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
                         System.out.print(GREEN + "█" + RESET);
                     }
-                    if (med == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
+                    else if (med == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
                         System.out.print(YELLOW + "█" + RESET);
                     }
-                    if (min == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
+                    else if (min == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
                         System.out.print(RED + "█" + RESET);
                     }
                 }
