@@ -56,7 +56,7 @@ public class App {
             System.out.println();
             System.out.println("Versión Horizontal");
             System.out.println();
-            
+
             for (int i = 1; i <= 3; i++) {
                 System.out.printf("num %s ", i);
                 for (int j = 0; j < ((i == 1) ? num1 : (i == 2) ? num2 : num3); j++) {
@@ -71,7 +71,7 @@ public class App {
                         System.out.print(RED + "█" + RESET);
                     }
                 }
-                System.out.printf("%n%n");
+                System.out.printf("%s%n%n",((i == 1) ? " "+num1+" " : (i == 2) ? " "+num2+" " : " "+num3+" "));
             }
         }
         // System.out.println("""
@@ -87,12 +87,13 @@ public class App {
             System.out.println("Versión Vertical");
             System.out.println();
 
-            System.out.printf("%7d%7d%7d%n", num1, num2, num3);
-            for (int i = max; i >= 1; i--) {
+            for (int i = max + 1; i >= 1; i--) {
                 for (int j = 1; j <= 3; j++) {
                     int valor = (j == 1) ? num1 : (j == 2) ? num2 : num3;
-                    System.out.println((j == 1) ? num1 : (j == 2) ? num2 : num3);
-                    if (i <= valor) {
+                    int valor1 = (j == 1) ? num1 + 1 : (j == 2) ? num2 + 1 : num3 + 1;
+                    if (i == valor1) {
+                        System.out.printf("%7d", valor);
+                    } else if (i < valor1) {
                         if (valor == max)
                             System.out.printf(GREEN + "%7s" + RESET, "████");
                         else if (valor == med)
