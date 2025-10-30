@@ -43,7 +43,7 @@ public class App {
 
         System.out.println("""
 
-                1. Horizontal
+                1. Horicontal
 
                 2. Vertical
 
@@ -64,14 +64,14 @@ public class App {
                     if (max == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
                         System.out.print(GREEN + "█" + RESET);
                     }
-                    else if (med == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
+                    if (med == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
                         System.out.print(YELLOW + "█" + RESET);
                     }
-                    else if (min == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
+                    if (min == ((i == 1) ? num1 : (i == 2) ? num2 : num3)) {
                         System.out.print(RED + "█" + RESET);
                     }
                 }
-                System.out.printf("%s%n%n",((i == 1) ? " "+num1+" " : (i == 2) ? " "+num2+" " : " "+num3+" "));
+                System.out.printf("%n%n");
             }
         }
         // System.out.println("""
@@ -91,6 +91,7 @@ public class App {
             for (int i = max; i >= 1; i--) {
                 for (int j = 1; j <= 3; j++) {
                     int valor = (j == 1) ? num1 : (j == 2) ? num2 : num3;
+                    System.out.println((j == 1) ? num1 : (j == 2) ? num2 : num3);
                     if (i <= valor) {
                         if (valor == max)
                             System.out.printf(GREEN + "%7s" + RESET, "████");
