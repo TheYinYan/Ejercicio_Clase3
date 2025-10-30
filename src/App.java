@@ -91,7 +91,6 @@ public class App {
             for (int i = max; i >= 1; i--) {
                 for (int j = 1; j <= 3; j++) {
                     int valor = (j == 1) ? num1 : (j == 2) ? num2 : num3;
-
                     if (i <= valor) {
                         if (valor == max)
                             System.out.printf(GREEN + "%7s" + RESET, "████");
