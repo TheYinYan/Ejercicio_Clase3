@@ -71,7 +71,7 @@ public class App {
                         System.out.print(RED + "█" + RESET);
                     }
                 }
-                System.out.printf("%n%n");
+                System.out.printf("%s%n%n",((i == 1) ? " "+num1+" " : (i == 2) ? " "+num2+" " : " "+num3+" "));
             }
         }
         // System.out.println("""
